@@ -7,8 +7,8 @@ This repo enables you to show status on an OLED display on an atomicpi. My atomi
 ### Wiring
 
 Connect the power (3.3V) and ground (GND) pins, and then:
-* SDA connects to atomicpi GPIO#3
-* SCL connects to atomicpi GPIO#4
+* **SDA** connects to atomicpi GPIO#3
+* **SCL** connects to atomicpi GPIO#4
 
 ### Custom I2C Bus
 
@@ -32,7 +32,7 @@ I.e., from that table:
 
 After creating the file, I suggest rebooting.
 
-When the machine comes back up, *check* that the I2C bus was created *and* your OLED was detected on the bus. Use `i2cdetect` (as `root`) for that, like this:
+When the machine comes back up, **check** that your custom I2C bus was created **and** that your OLED was detected on this bus. Use `i2cdetect` (as `root`) for that, like this:
 
 ```
  $ sudo i2cdetect -y 100
@@ -52,7 +52,7 @@ The `100` is the I2C bus number to check. The `-y` says don't prompt me for Y/N 
 
 ### OLED display library
 
-To draw the text (or shapes, etc.) I used the `luma` OLED library. It is a nice little software I2C (i.e., "bitbanged" I2C) implementation. The documentation for it are here, in case you want to show something different on your screen:
+To draw the text (or shapes, etc.) I used the `luma` OLED library. It is a nice little software I2C (i.e., "bitbanged" I2C) implementation. The documentation for it is here, in case you want to show something different on your screen:
     [https://ssd1306.readthedocs.io/en/latest/intro.html](https://ssd1306.readthedocs.io/en/latest/intro.html)
 
 ### How to use the container
