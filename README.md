@@ -1,6 +1,6 @@
 # atomicpi-oled
 
-This repo enables you to show status on an OLED display on an atomicpi. My atomicpi is running their ubuntu 18.04 image, and this code uses bitbanged I2C to drive a 0.96 inch OLED screen. It looks like this:
+This repo enables you to show status on an OLED display on an atomicpi. My atomicpi is running the Digital Loggers ubuntu 18.04 image, and this code uses bitbanged I2C to drive a 0.96 inch OLED screen. It looks like this:
 
 ![atomicpi-oled-photo](https://raw.githubusercontent.com/MegaMosquito/atomicpi-oled/main/atomicpi-oled.jpg)
 
@@ -79,7 +79,7 @@ Then exit your shell (e.g., close your `ssh` session) and open a new shell (e.g.
 git clone https://github.com/MegaMosquito/atomicpi-oled.git
 ```
 
-4. Cd into the repo, and build the container:
+4. Cd into the repo, and build the container (Note: if your atomic pi is running 20.04, edit the FROM line in the Dockerfile to use 20.04 too):
 
 ```
 cd atomicpi-oled
